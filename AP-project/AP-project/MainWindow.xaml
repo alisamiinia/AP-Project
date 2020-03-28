@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AP_project"
         mc:Ignorable="d"
-        Title="Hello!" Height="450" Width="500" Icon="/img/as.png">
-    <Border Padding="5 0">
-        <Grid>
-            <TabControl>
+        Title="Hello!" Height="550" Width="500" Icon="/img/as.png">
+    <Border Padding="5 0 5 5">
+        <TabControl>
                 <TabItem Header="home">
                     <StackPanel>
-                        <Grid>
+                    <TextBlock Text="click the button you want" Margin="0 10" FontSize="16" Foreground="DarkSlateBlue"/>
+                    <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="4*"/>
                                 <ColumnDefinition Width="2*"/>
@@ -30,15 +30,18 @@
                             </Grid.ColumnDefinitions>
                             <CheckBox x:Name="one" Content="یک" Grid.Column="0" Margin="0 5 0 0"></CheckBox>
                             <CheckBox x:Name="two" Content="دو" Grid.Column="1" Margin="0 5 0 0"></CheckBox>
-                            <ComboBox x:Name="combo" SelectedIndex="0" Padding="5" Grid.Column="2" >
-                                <ComboBoxItem>tehran</ComboBoxItem>
-                                <ComboBoxItem>khansar</ComboBoxItem>
-                                <ComboBoxItem>kashan</ComboBoxItem>
-                                <ComboBoxItem>aran</ComboBoxItem>
-                                <ComboBoxItem>babol</ComboBoxItem>
-                            </ComboBox>
+                            <StackPanel Grid.Column="2">
+                                <TextBlock Text="set your city" Margin="0 3"/>
+                                <ComboBox x:Name="combo" SelectedIndex="0" Padding="5" Grid.Column="2" >
+                                    <ComboBoxItem>tehran</ComboBoxItem>
+                                    <ComboBoxItem>khansar</ComboBoxItem>
+                                    <ComboBoxItem>kashan</ComboBoxItem>
+                                    <ComboBoxItem>aran</ComboBoxItem>
+                                    <ComboBoxItem>babol</ComboBoxItem>
+                                </ComboBox>
+                            </StackPanel>
                         </Grid>
-                        <Grid>
+                        <Grid Margin="0 0 0 25">
                             <Grid.ColumnDefinitions >
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
@@ -54,7 +57,7 @@
                             <CheckBox x:Name="five" Content="پنج" Grid.Column="0" Margin="0 5 0 0"></CheckBox>
                             <CheckBox x:Name="six" Content="شش" Grid.Column="1" Margin="0 5 0 0"></CheckBox>
                         </Grid>
-                        <TextBlock Text="Write your info here" Margin="0 10" FontSize="16" Foreground="DarkSlateBlue"/>
+                        <TextBlock Text="Write your info here" Margin="0 12" FontSize="16" Foreground="DarkSlateBlue"/>
                         <TextBox x:Name="aaa" Height="180"/>
                         <Grid>
                             <Grid.ColumnDefinitions >
@@ -94,11 +97,9 @@
                             <TextBlock Text="equations" Margin="0 10" FontSize="16" Foreground="DarkSlateBlue" Grid.Column="0"/>
                             <TextBox Margin="0 10 80 10" Height="40" Grid.Column="1"/>
                         </Grid>
-                        <Image Source="/img/vs.png" Height="200" />
+                        <Image Source="/img/vs.png" Height="300" />
                     </StackPanel>
                 </TabItem>
             </TabControl>
-            <TextBlock Text="wpf c# VS" Foreground="DarkSlateBlue" FontWeight="Bold" Margin="200 0"/>
-        </Grid>
     </Border>
 </Window>
