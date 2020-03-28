@@ -5,8 +5,100 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AP_project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Hello!" Height="450" Width="500" Icon="/img/as.png">
+    <Border Padding="5 0">
+        <Grid>
+            <TabControl>
+                <TabItem Header="home">
+                    <StackPanel>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="4*"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="new" Margin="5 5 5 0" Grid.Column="0" Content="new"></Button>
+                            <Button x:Name="load" Margin="5 5 5 0" Grid.Column="1" Content="load"></Button>
+                            <Button x:Name="refesh" Margin="5 5 5 0" Grid.Column="2" Content="refresh"></Button>
+                        </Grid>
+                        <TextBlock Text="Enter your information" Margin="0 10" FontSize="16" Foreground="DarkSlateBlue"></TextBlock>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <CheckBox x:Name="one" Content="یک" Grid.Column="0" Margin="0 5 0 0"></CheckBox>
+                            <CheckBox x:Name="two" Content="دو" Grid.Column="1" Margin="0 5 0 0"></CheckBox>
+                            <ComboBox x:Name="combo" SelectedIndex="0" Padding="5" Grid.Column="2" >
+                                <ComboBoxItem>tehran</ComboBoxItem>
+                                <ComboBoxItem>khansar</ComboBoxItem>
+                                <ComboBoxItem>kashan</ComboBoxItem>
+                                <ComboBoxItem>aran</ComboBoxItem>
+                                <ComboBoxItem>babol</ComboBoxItem>
+                            </ComboBox>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions >
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <CheckBox x:Name="three" Content="سه" Grid.Column="0"></CheckBox>
+                            <CheckBox x:Name="four" Content="چهار" Grid.Column="1"></CheckBox>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions >
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <CheckBox x:Name="five" Content="پنج" Grid.Column="0" Margin="0 5 0 0"></CheckBox>
+                            <CheckBox x:Name="six" Content="شش" Grid.Column="1" Margin="0 5 0 0"></CheckBox>
+                        </Grid>
+                        <TextBlock Text="Write your info here" Margin="0 10" FontSize="16" Foreground="DarkSlateBlue"/>
+                        <TextBox x:Name="aaa" Height="180"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions >
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="save" Content="save" Grid.Column="1" Margin="0 10 5 0"></Button>
+                            <Button x:Name="next" Content="next" Grid.Column="2" Margin="5 10 0 0"></Button>
+                        </Grid>
+                    </StackPanel>
+                </TabItem>
+                <TabItem Header="your information" >
+                    <StackPanel>
+                        <TextBlock Text="Enter your information" Margin="0 10" FontSize="16" Foreground="DarkSlateBlue"></TextBlock>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Name" Margin="0 10" FontSize="16" Foreground="DarkSlateBlue" Grid.Column="0"/>
+                            <TextBox Margin="0 10 80 10" Grid.Column="1"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Family" Margin="0 10" FontSize="16" Foreground="DarkSlateBlue" Grid.Column="0"/>
+                            <TextBox Margin="0 10 80 10" Grid.Column="1"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="equations" Margin="0 10" FontSize="16" Foreground="DarkSlateBlue" Grid.Column="0"/>
+                            <TextBox Margin="0 10 80 10" Height="40" Grid.Column="1"/>
+                        </Grid>
+                        <Image Source="/img/vs.png" Height="200" />
+                    </StackPanel>
+                </TabItem>
+            </TabControl>
+            <TextBlock Text="wpf c# VS" Foreground="DarkSlateBlue" FontWeight="Bold" Margin="200 0"/>
+        </Grid>
+    </Border>
 </Window>
