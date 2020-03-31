@@ -20,19 +20,11 @@ namespace AP_project
     /// </summary>
     public partial class MainWindow : Window
     {
-        static int a = 0;
+        static int background;
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        public static void checkline()
-        {
-            a++;
-            if (a >= 76)
-            {
-                
-            }
+            background = 0;
         }
 
         private void Next_Click(object sender, RoutedEventArgs e)
@@ -43,6 +35,27 @@ namespace AP_project
         private void Backbtn_Click(object sender, RoutedEventArgs e)
         {
             control.SelectedIndex--;
+        }
+
+        private void Background_Click(object sender, RoutedEventArgs e)
+        {
+            if (background % 4 == 0)
+            {
+                control.Background = new LinearGradientBrush(Colors.LightBlue,Colors.White, 45);
+            }
+            else if (background % 4 == 1)
+            {
+                control.Background = new LinearGradientBrush(Colors.DarkGray , Colors.White, 45);
+            }
+            else if (background % 4 == 2)
+            {
+                control.Background = new LinearGradientBrush(Colors.SkyBlue , Colors.LightYellow, 90);
+            }
+            else
+            {
+                control.Background = Brushes.White;
+            }
+            background++;
         }
     }
 }
