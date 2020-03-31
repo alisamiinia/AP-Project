@@ -20,9 +20,29 @@ namespace AP_project
     /// </summary>
     public partial class MainWindow : Window
     {
+        static int a = 0;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        public static void checkline()
+        {
+            a++;
+            if (a >= 76)
+            {
+                
+            }
+        }
+
+        private void Next_Click(object sender, RoutedEventArgs e)
+        {
+            control.SelectedIndex++;
+        }
+
+        private void Backbtn_Click(object sender, RoutedEventArgs e)
+        {
+            control.SelectedIndex--;
         }
     }
 }
